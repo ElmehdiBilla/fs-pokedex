@@ -52,7 +52,7 @@ module.exports = [
       globals: {
         ...globals.browser,
         ...globals.es6,
-        ...globals.jest
+        ...globals.jest,
       }
     },
     settings: {
@@ -72,6 +72,15 @@ module.exports = [
       'arrow-spacing': ['error', { 'before': true, 'after': true }],
       'no-console': 'error',
       'react/prop-types': 0
+    }
+  },
+  {
+    files: ['jest.setup.js'],
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node
+      }
     }
   }
 ]
