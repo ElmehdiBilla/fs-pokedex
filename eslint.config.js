@@ -82,5 +82,12 @@ module.exports = [
         ...globals.node
       }
     }
+  },
+  {
+    files: ['playwright.config.js', 'e2e-tests/**/*.spec.js', 'e2e-tests/**/*.test.js'],
+    rules:{
+      'no-undef': 'off',
+      'no-unused-vars': 'off'
+    }
   }
 ]
